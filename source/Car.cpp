@@ -1,7 +1,8 @@
 #include "Car.h"
+#include "Factory.h"
 
 Car::Car()
-    : logger(factory::CreateLogger())
+    : logger(factory::CreateCarLogger())
 {
 }
 void Car::TurnLeft()

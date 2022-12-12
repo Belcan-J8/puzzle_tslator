@@ -13,7 +13,13 @@ public:
     void Log(std::string string);
 };
 
-namespace factory
+class ColorLogger : public Logger
 {
-    Logger *CreateLogger();
-}
+public:
+    enum class Color { Red, Blue };
+
+    ColorLogger(Color color);
+    void Log(std::string string);
+private:
+    Color color_;
+};

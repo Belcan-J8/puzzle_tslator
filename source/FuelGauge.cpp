@@ -1,8 +1,9 @@
 #include "FuelGauge.h"
+#include "Factory.h"
 
 FuelGauge::FuelGauge()
     : fuelLevel(5)
-    , logger(factory::CreateLogger())
+    , logger(factory::CreateFuelGaugeLogger())
 {
 }
 void FuelGauge::DecrementFuelLevel()

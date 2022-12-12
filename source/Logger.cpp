@@ -2,16 +2,33 @@
 
 #include <iostream>
 
+#include "termcolor.hpp"
+
 void Logger::Log(std::string string)
 {
-    std::cout << string << std::endl;
+    std::cout << termcolor::reset << string << std::endl;
 }
 
 
-namespace factory
+ColorLogger::ColorLogger(Color color) : color_(color)
 {
-    Logger *CreateLogger()
+}
+
+void ColorLogger::Log(std::string string)
+{
+    switch (color_)
     {
-        return new Logger();
+        case ColorLogger::Color::Red:
+            std::cout << termcolor::red << string << std::endl;
+            break;
+
+        case ColorLogger::Color::Blue:
+            std::cout << termcolor::blue << string << std::endl;
+            break;
+
+        // Unhandled enumeration - Fallback to base class
+        default:
+            Logger::Log(string);
+            break;
     }
 }
