@@ -1,9 +1,9 @@
 OBJS	= Car.o FuelGauge.o Logger.o main.o
 SOURCE  = Car.cpp FuelGauge.cpp Logger.cpp main.cpp
-HEADER  = Car.h FuelGauge.h Logger.h
+HEADER  = Car.h FuelGauge.h Logger.h termcolor.hpp
 OUT     = puzzle
 CC      = g++
-FLAGS   = -g -c -Wall
+FLAGS   = -g -c -Wall -std=c++17
 LFLAGS  =
 
 all: $(OBJS)
