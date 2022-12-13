@@ -13,13 +13,15 @@ public:
     void Log(std::string string);
 };
 
-class ColorLogger : public Logger
+class BlueLogger : public ILogger
 {
 public:
-    enum class Color { Red, Blue };
-
-    ColorLogger(Color color);
-    void Log(std::string string);
-private:
-    Color color_;
+	void Log(std::string string);
 };
+
+class RedLogger : public ILogger
+{
+public:
+	void Log(std::string string);
+};
+
