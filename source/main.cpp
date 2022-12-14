@@ -3,14 +3,14 @@
 
 int main(int argc, char* argv[])
 {
-	Logger logger;
+    Logger logger;
 
-	logger.Log("Starting application");
+    logger.Log("Starting application");
 
-	Car car;
-	car.TurnLeft();
-	car.TurnRight();
-	car.Accelerate();
+    Car car;
+    car.TurnLeft();
+    car.TurnRight();
+    car.Accelerate();
 
-	logger.Log("Exiting application");
+    logger.Log("Exiting application");
 }
