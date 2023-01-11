@@ -6,7 +6,7 @@
 class Car
 {
 public:
-    Car();
+    Car(ILogger *logger);
     void TurnLeft();
     void TurnRight();
     void Accelerate();
